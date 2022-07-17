@@ -1,0 +1,26 @@
+#ifndef __CONFIG_H_
+#define __CONFIG_H_
+
+#define IS_BIGENDIAN ${IS_BIGENDIAN}
+
+#ifdef __cplusplus
+inline bool is_bigendian() {
+  return IS_BIGENDIAN;
+}
+#endif  //__cplusplus
+
+#cmakedefine OS_32
+#cmakedefine OS_64
+
+#cmakedefine OS_WINDOWS
+#cmakedefine OS_LINUX
+#cmakedefine OS_DARWIN
+#cmakedefine OS_FREEBSD
+#cmakedefine OS_QNX
+#cmakedefine OS_COMMONUNIX
+
+#cmakedefine ARCH_X86
+#cmakedefine ARCH_X86_64
+#cmakedefine ARCH_AARCH64
+
+#endif //__CONFIG_H_
